@@ -1,0 +1,17 @@
+<div class="contents row">
+  <%= form_for @tweet do |f| %>
+    <h3>
+      編集する
+    </h3>
+      <div class="field">
+        <%= f.file_field :photo %>
+      </div>
+    <%= f.label :kamiku, "上の句" %>
+    <%= f.text_field :kamiku, placeholder: "上の句" %>
+    <%= f.label :nakaku, "中の句" %>
+    <%= f.text_field :nakaku, placeholder: "中の句" %>
+    <%= f.label :simoku, "下の句" %>
+    <%= f.text_field :simoku, placeholder: "下の句" %>
+    <%= f.submit "投稿" %>
+  <% end %>
+</div>
